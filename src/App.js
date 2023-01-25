@@ -13,13 +13,6 @@ function Square({value, onSquareClick}) {
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares,setSquares] = useState(Array(9).fill(null));
-  const [pastMove,setPastMove] = useState(true);
-  
-
-  const redoHandler = () => {
-    return(<div><h1>give</h1></div>)
-    
-    };
 
   function handleClick(i) {
   if (calculateWinner(squares) || squares[i]){
