@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
+  background-color: rgb(255, 217, 0);
 }
 
 body {
@@ -57,7 +62,7 @@ body {
 }
 
 .square {
-  background: #fff;
+  background: #ead708;
   border: 1px solid #999;
   float: left;
   font-size: 24px;
@@ -81,11 +86,6 @@ body {
   margin-bottom: 10px;
 
 }
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
 .game-info {
   margin-left: 20px;
 }
