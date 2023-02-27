@@ -32,8 +32,8 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
-    <>
-      <div className="status">{status}</div>
+    <div class=''>
+      <div className="status" class='font-bold pb-3'>{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -49,7 +49,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -78,18 +78,18 @@ export default function Game() {
       description = "Go to game start!";
     }
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li class='mb-3' key={move}>
+        <button class=' ' onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className="game" class='flex flex-row justify-center m-10'>
+      <div>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
+      <div className="game-info" >
         <ol>{moves}</ol>
       </div>
     </div>
