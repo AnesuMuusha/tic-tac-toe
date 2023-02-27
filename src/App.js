@@ -78,18 +78,18 @@ export default function Game() {
       description = "Go to game start!";
     }
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li class='m-3' key={move}>
+        <button class=' ' onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className="game" class='flex flex-row justify-center m-10'>
+      <div>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
+      <div className="game-info" >
         <ol>{moves}</ol>
       </div>
     </div>
